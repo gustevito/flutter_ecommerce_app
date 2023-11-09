@@ -24,7 +24,7 @@ class IntroPage extends StatelessWidget {
             ),
             // title
             Text(
-              'Beets Store',
+              'Beetz Store',
               style: GoogleFonts.josefinSans(
                 fontWeight: FontWeight.w800,
                 fontSize: 42,
