@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:minimal_ecommerce_app/components/mybutton.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -18,7 +19,7 @@ class IntroPage extends StatelessWidget {
               height: 100,
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             // title
@@ -36,12 +37,16 @@ class IntroPage extends StatelessWidget {
               'Fashion that stings.',
               style: GoogleFonts.josefinSans(
                 fontWeight: FontWeight.w200,
-                fontSize: 24,
+                fontSize: 25,
                 color: Theme.of(context).colorScheme.inversePrimary,
               ),
             ),
-
+            SizedBox(height: 20),
             //button
+            MyButton(
+              onTap: () => Navigator.pushNamed(context, '/home'),
+              child: Icon(Icons.arrow_forward_ios),
+            ),
           ],
         ),
       ),
