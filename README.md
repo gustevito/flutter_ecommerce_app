@@ -1,4 +1,4 @@
-# minimal_ecommerce_app
+# flutter_ecommerce_app
 
 A new Flutter project.
 
