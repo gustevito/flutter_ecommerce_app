@@ -23,19 +23,23 @@ class MyHome extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/beets_2.png',
-              fit: BoxFit.contain,
-              height: 50,
-            ),
-            const SizedBox(
-              width: 50,
-            ),
-          ],
+
+        // logo
+        title: Image.asset(
+          'assets/beets_4.png',
+          fit: BoxFit.contain,
+          height: 50,
         ),
+
+        // theme switch
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.dark_mode_outlined,
+            ),
+          )
+        ],
       ),
       body: ListView(
         children: [

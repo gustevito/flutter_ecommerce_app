@@ -18,7 +18,7 @@ class MyDrawer extends StatelessWidget {
               SizedBox(
                 height: 180,
                 child: DrawerHeader(
-                  child: Image.asset('assets/beets_2.png'),
+                  child: Image.asset('assets/beets_4.png'),
                 ),
               ),
 
