@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:minimal_ecommerce_app/models/product.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:minimal_ecommerce_app/models/shop.dart';
+import 'package:provider/provider.dart';
 
 class ProductTile extends StatelessWidget {
   final Product product;
@@ -11,7 +13,33 @@ class ProductTile extends StatelessWidget {
   });
 
   // add to cart
-  void addToCart(BuildContext context) {}
+  void addToCart(BuildContext context) {
+    // dialog box to confirm
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        content: Text('Add this item to your cart?'),
+        actions: [
+          MaterialButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Cancel'),
+          ),
+          MaterialButton(
+            color: Colors.amber,
+            onPressed: () {
+              Navigator.pop(context);
+
+              context.read<Shop>().addToCart(product);
+            },
+            child: Text(
+              'Add',
+              style: TextStyle(fontWeight: FontWeight.w800),
+            ),
+          )
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {

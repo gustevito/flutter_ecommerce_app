@@ -35,12 +35,13 @@ class MyHome extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.dark_mode_outlined,
+              Icons.settings,
             ),
           )
         ],
       ),
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
           // title
           Padding(
@@ -60,7 +61,7 @@ class MyHome extends StatelessWidget {
                 ),
                 // subtitle
                 Text(
-                  "on your favorite hive of fashion",
+                  "on your favorite hive of fashion.",
                   style: GoogleFonts.josefinSans(
                     fontWeight: FontWeight.w300,
                     fontSize: 16,
@@ -71,7 +72,7 @@ class MyHome extends StatelessWidget {
           ),
           // products
           SizedBox(
-            height: 550,
+            height: 500,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.all(15),
