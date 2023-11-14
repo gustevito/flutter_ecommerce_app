@@ -25,10 +25,9 @@ class MyHome extends StatelessWidget {
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         // logo
-        title: Image.asset(
-          'assets/beets_4.png',
-          fit: BoxFit.contain,
-          height: 50,
+        title: ImageIcon(
+          AssetImage('assets/beets_4.png'),
+          size: 120,
         ),
 
         // theme switch
@@ -55,11 +54,15 @@ class MyHome extends StatelessWidget {
                     fontSize: 30,
                   ),
                 ),
+
+                SizedBox(
+                  height: 5,
+                ),
                 // subtitle
                 Text(
-                  "on your hive of fashion",
+                  "on your favorite hive of fashion",
                   style: GoogleFonts.josefinSans(
-                    fontWeight: FontWeight.w200,
+                    fontWeight: FontWeight.w300,
                     fontSize: 16,
                   ),
                 ),

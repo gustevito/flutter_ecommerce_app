@@ -22,6 +22,7 @@ class MyListTile extends StatelessWidget {
         child: ListTile(
           leading: Icon(
             icon,
+            color: Theme.of(context).colorScheme.inversePrimary,
           ),
           title: Text(text),
         ),
