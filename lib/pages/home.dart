@@ -25,7 +25,7 @@ class MyHome extends StatelessWidget {
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         // logo
-        title: ImageIcon(
+        title: const ImageIcon(
           AssetImage('assets/beets_4.png'),
           size: 120,
         ),
@@ -34,7 +34,7 @@ class MyHome extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
             ),
           )
@@ -56,7 +56,7 @@ class MyHome extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 // subtitle
@@ -72,7 +72,7 @@ class MyHome extends StatelessWidget {
           ),
           // products
           SizedBox(
-            height: 500,
+            height: 480,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.all(15),

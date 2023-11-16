@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../models/product.dart';
 import '../models/shop.dart';
@@ -9,32 +10,7 @@ class CartPage extends StatelessWidget {
 
   // remove from cart function
   void removeItemFromCart(BuildContext context, Product product) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        content: Text('Remove this item from your cart?'),
-        actions: [
-          MaterialButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('Cancel'),
-          ),
-          MaterialButton(
-            color: Color.fromARGB(255, 255, 124, 115),
-            onPressed: () {
-              Navigator.pop(context);
-
-              context.read<Shop>().removeFromCart(product);
-            },
-            child: Text(
-              'Remove',
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          )
-        ],
-      ),
-    );
+    context.read<Shop>().removeFromCart(product);
   }
 
   @override
@@ -49,7 +25,10 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Your Cart'),
+        title: Text(
+          'Your Cart',
+          style: GoogleFonts.dmSerifDisplay(fontSize: 24),
+        ),
       ),
       body: Column(
         children: [

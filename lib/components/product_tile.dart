@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:minimal_ecommerce_app/models/product.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:minimal_ecommerce_app/models/shop.dart';
@@ -15,30 +16,7 @@ class ProductTile extends StatelessWidget {
   // add to cart
   void addToCart(BuildContext context) {
     // dialog box to confirm
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        content: Text('Add this item to your cart?'),
-        actions: [
-          MaterialButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('Cancel'),
-          ),
-          MaterialButton(
-            color: Colors.amber,
-            onPressed: () {
-              Navigator.pop(context);
-
-              context.read<Shop>().addToCart(product);
-            },
-            child: Text(
-              'Add',
-              style: TextStyle(fontWeight: FontWeight.w800),
-            ),
-          )
-        ],
-      ),
-    );
+    context.read<Shop>().addToCart(product);
   }
 
   @override
@@ -50,7 +28,7 @@ class ProductTile extends StatelessWidget {
       ),
       margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(25),
-      width: 280,
+      width: 260,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,6 +97,29 @@ class ProductTile extends StatelessWidget {
                 ),
                 child: IconButton(
                   onPressed: () {
+                    var snack;
+                    void closeSnack() {
+                      snack.close();
+                    }
+
+                    snack = Get.snackbar(
+                      'Product Added',
+                      product.name,
+                      mainButton: TextButton(
+                        onPressed: () {
+                          context.read<Shop>().removeFromCart(product);
+                          closeSnack();
+                        },
+                        child: Text(
+                          'Undo',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.amber[700],
+                          ),
+                        ),
+                      ),
+                    );
+
                     addToCart(context);
                   },
                   icon: Icon(Icons.add),
