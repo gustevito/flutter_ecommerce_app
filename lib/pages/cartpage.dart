@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:minimal_ecommerce_app/components/button.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../components/cart_tile.dart';
 import '../models/product.dart';
 import '../models/shop.dart';
 
@@ -11,6 +13,16 @@ class CartPage extends StatelessWidget {
   // remove from cart function
   void removeItemFromCart(BuildContext context, Product product) {
     context.read<Shop>().removeFromCart(product);
+  }
+
+  void payButton(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        content: Text(
+            'It works! Connect this app to your payment backend and you\'re good to go'),
+      ),
+    );
   }
 
   @override
@@ -41,15 +53,26 @@ class CartPage extends StatelessWidget {
                   final item = cart[index];
 
                   // return as a cart tile
-                  return ListTile(
+                  return CartTile(
                     title: Text(item.name),
                     subtitle: Text(item.price.toStringAsFixed(2)),
-                    trailing: IconButton(
-                      icon: Icon(Icons.remove),
-                      onPressed: () => removeItemFromCart(context, item),
-                    ),
+                    onPressed: () => removeItemFromCart(context, item),
                   );
                 }),
+          ),
+
+          // pay button
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: MyButton(
+              onTap: () => payButton(context),
+              child: Text(
+                'Checkout',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           )
         ],
       ),
