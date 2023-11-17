@@ -15,7 +15,7 @@ class IntroPage extends StatelessWidget {
           children: [
             //logo
             Image.asset(
-              'assets/BEETS.png',
+              'assets/logos/BEETS.png',
               height: 100,
             ),
 

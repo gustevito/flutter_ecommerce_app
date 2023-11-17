@@ -25,17 +25,17 @@ class MyHome extends StatelessWidget {
 
         // logo
         title: const ImageIcon(
-          AssetImage('assets/beets_4.png'),
+          AssetImage('assets/logos/beets_4.png'),
           size: 120,
         ),
 
         // theme switch
         actions: <Widget>[
           IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.settings,
-            ),
+            icon: Icon(Icons.shopping_cart_outlined),
+            onPressed: () {
+              Navigator.pushNamed(context, '/cartpage');
+            },
           )
         ],
       ),

@@ -16,14 +16,19 @@ class CartTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-      child: ListTile(
-        tileColor: Theme.of(context).colorScheme.primary,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        title: title,
-        subtitle: subtitle,
-        trailing: IconButton(
-          icon: Icon(Icons.remove),
-          onPressed: onPressed,
+      child: Material(
+        elevation: 1,
+        borderRadius: BorderRadius.circular(10),
+        child: ListTile(
+          tileColor: Theme.of(context).colorScheme.primary,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          title: title,
+          subtitle: subtitle,
+          trailing: IconButton(
+            icon: Icon(Icons.remove),
+            onPressed: onPressed,
+          ),
         ),
       ),
     );

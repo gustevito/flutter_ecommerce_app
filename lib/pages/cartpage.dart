@@ -18,7 +18,7 @@ class CartPage extends StatelessWidget {
   void payButton(BuildContext context) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (context) => const AlertDialog(
         content: Text(
             'It works! Connect this app to your payment backend and you\'re good to go'),
       ),
