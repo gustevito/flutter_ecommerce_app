@@ -105,16 +105,25 @@ class ProductTile extends StatelessWidget {
                     snack = Get.snackbar(
                       'Product Added',
                       product.name,
+                      snackPosition: SnackPosition.BOTTOM,
+                      margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
+                      animationDuration: Duration(milliseconds: 600),
                       mainButton: TextButton(
                         onPressed: () {
                           context.read<Shop>().removeFromCart(product);
                           closeSnack();
                         },
-                        child: Text(
-                          'Undo',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.amber[700],
+                        child: Container(
+                          padding: EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.inversePrimary,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            'Undo',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
