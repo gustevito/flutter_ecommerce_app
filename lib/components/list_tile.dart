@@ -4,12 +4,14 @@ class MyListTile extends StatelessWidget {
   final String text;
   final IconData icon;
   final void Function()? onTap;
+  final Widget? trailing;
 
   const MyListTile({
     super.key,
     required this.text,
     required this.icon,
     required this.onTap,
+    required this.trailing,
   });
 
   @override
@@ -25,6 +27,7 @@ class MyListTile extends StatelessWidget {
             color: Theme.of(context).colorScheme.inversePrimary,
           ),
           title: Text(text),
+          trailing: trailing,
         ),
       ),
     );

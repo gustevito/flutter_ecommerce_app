@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:minimal_ecommerce_app/models/shop.dart';
@@ -24,9 +26,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      scrollBehavior: const MaterialScrollBehavior().copyWith(dragDevices: {
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.touch,
+        PointerDeviceKind.stylus,
+        PointerDeviceKind.unknown,
+        PointerDeviceKind.trackpad,
+      }),
       debugShowCheckedModeBanner: false,
       home: const IntroPage(),
-      theme: darkMode,
+      theme: lightMode,
       darkTheme: darkMode,
       routes: {
         '/intropage': (context) => const IntroPage(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:minimal_ecommerce_app/components/drawer.dart';
 import 'package:minimal_ecommerce_app/components/product_tile.dart';
 import 'package:provider/provider.dart';
@@ -32,9 +33,11 @@ class MyHome extends StatelessWidget {
         // theme switch
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon:
+                Get.isDarkMode ? Icon(Icons.light_mode) : Icon(Icons.dark_mode),
             onPressed: () {
-              Navigator.pushNamed(context, '/cartpage');
+              Get.changeThemeMode(
+                  Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
             },
           )
         ],
@@ -44,28 +47,50 @@ class MyHome extends StatelessWidget {
         children: [
           // title
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            padding: const EdgeInsets.fromLTRB(25, 10, 20, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Shop',
-                  style: GoogleFonts.dmSerifDisplay(
-                    fontSize: 30,
-                  ),
-                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Shop',
+                      style: GoogleFonts.dmSerifDisplay(
+                        fontSize: 30,
+                      ),
+                    ),
 
-                const SizedBox(
-                  height: 5,
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    // subtitle
+                    Text(
+                      "on your favorite hive of fashion.",
+                      style: GoogleFonts.josefinSans(
+                        fontWeight: FontWeight.w300,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
                 ),
-                // subtitle
-                Text(
-                  "on your favorite hive of fashion.",
-                  style: GoogleFonts.josefinSans(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 16,
-                  ),
-                ),
+                Container(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primary,
+                      border: Border.all(
+                        color: Theme.of(context).colorScheme.secondary,
+                      ),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.shopping_cart,
+                        size: 20,
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/cartpage');
+                      },
+                    )),
               ],
             ),
           ),

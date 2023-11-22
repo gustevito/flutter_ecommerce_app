@@ -8,7 +8,7 @@ class Shop extends ChangeNotifier {
       name: 'Product 1',
       price: 49.99,
       description: 'Item description',
-      image: DecorationImage(
+      image: const DecorationImage(
         image: AssetImage('assets/images/sneaker.jpg'),
       ),
     ),
@@ -16,7 +16,7 @@ class Shop extends ChangeNotifier {
       name: 'Product 2',
       price: 49.99,
       description: 'Item description',
-      image: DecorationImage(
+      image: const DecorationImage(
         image: AssetImage('assets/images/hoodie.jpg'),
       ),
     ),
@@ -24,7 +24,7 @@ class Shop extends ChangeNotifier {
       name: 'Product 3',
       price: 49.99,
       description: 'Item description',
-      image: DecorationImage(
+      image: const DecorationImage(
         image: AssetImage('assets/images/watch.jpg'),
       ),
     ),
@@ -32,8 +32,64 @@ class Shop extends ChangeNotifier {
       name: 'Product 4',
       price: 49.99,
       description: 'Item description',
-      image: DecorationImage(
+      image: const DecorationImage(
+        image: AssetImage('assets/images/cargo.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 5',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
+        image: AssetImage('assets/images/blackshirt2.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 6',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
+        image: AssetImage('assets/images/greyshirt.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 7',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
+        image: AssetImage('assets/images/whiteshirt2.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 8',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
         image: AssetImage('assets/images/blackshirt.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 9',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
+        image: AssetImage('assets/images/watch2.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 10',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
+        image: AssetImage('assets/images/allstar.jpg'),
+      ),
+    ),
+    Product(
+      name: 'Product 11',
+      price: 49.99,
+      description: 'Item description',
+      image: const DecorationImage(
+        image: AssetImage('assets/images/watch3.jpg'),
       ),
     ),
   ];
