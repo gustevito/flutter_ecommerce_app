@@ -41,14 +41,11 @@ class ProductTile extends StatelessWidget {
                 aspectRatio: 1,
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.secondary,
+                    image: product.image,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   padding: EdgeInsets.all(25),
                   width: double.infinity,
-                  child: Icon(
-                    Icons.favorite,
-                  ),
                 ),
               ),
 
