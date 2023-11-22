@@ -26,8 +26,8 @@ class ProductTile extends StatelessWidget {
         color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(12),
       ),
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(25),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(25),
       width: 260,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,7 +44,7 @@ class ProductTile extends StatelessWidget {
                     image: product.image,
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  padding: EdgeInsets.all(25),
+                  padding: const EdgeInsets.all(25),
                   width: double.infinity,
                 ),
               ),
@@ -80,7 +80,7 @@ class ProductTile extends StatelessWidget {
             children: [
               Text(
                 '\$${product.price.toStringAsFixed(2)}',
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
 
               // add button
@@ -93,30 +93,32 @@ class ProductTile extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: IconButton(
+                  icon: const Icon(Icons.add),
                   onPressed: () {
                     var snack;
                     void closeSnack() {
                       snack.close();
                     }
 
+                    Get.closeCurrentSnackbar();
                     snack = Get.snackbar(
                       'Product Added',
                       product.name,
                       snackPosition: SnackPosition.BOTTOM,
-                      margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
-                      animationDuration: Duration(milliseconds: 600),
+                      margin: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+                      animationDuration: const Duration(milliseconds: 600),
                       mainButton: TextButton(
                         onPressed: () {
                           context.read<Shop>().removeFromCart(product);
                           closeSnack();
                         },
                         child: Container(
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.inversePrimary,
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: Text(
+                          child: const Text(
                             'Undo',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -128,7 +130,6 @@ class ProductTile extends StatelessWidget {
 
                     addToCart(context);
                   },
-                  icon: Icon(Icons.add),
                 ),
               ),
             ],

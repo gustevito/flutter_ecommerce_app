@@ -34,7 +34,7 @@ class MyHome extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon:
-                Get.isDarkMode ? Icon(Icons.light_mode) : Icon(Icons.dark_mode),
+                Get.isDarkMode ? const Icon(Icons.light_mode) : const Icon(Icons.dark_mode),
             onPressed: () {
               Get.changeThemeMode(
                   Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
@@ -83,7 +83,7 @@ class MyHome extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: IconButton(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.shopping_cart,
                         size: 20,
                       ),

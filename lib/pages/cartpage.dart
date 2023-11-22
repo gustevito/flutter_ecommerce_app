@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:minimal_ecommerce_app/components/button.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -54,10 +55,53 @@ class CartPage extends StatelessWidget {
 
                   // return as a cart tile
                   return CartTile(
-                    title: Text(item.name),
-                    subtitle: Text(item.price.toStringAsFixed(2)),
-                    onPressed: () => removeItemFromCart(context, item),
-                  );
+                      title: Text(item.name),
+                      subtitle: Text(item.price.toStringAsFixed(2)),
+                      onPressed: () {
+                        var snack;
+                        void closeSnack() {
+                          snack.close();
+                        }
+
+                        int removeIndex = index;
+
+                        Product product = item;
+
+                        Get.closeCurrentSnackbar();
+                        snack = Get.snackbar(
+                          'Product Removed',
+                          product.name,
+                          snackPosition: SnackPosition.BOTTOM,
+                          margin: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+                          animationDuration: const Duration(milliseconds: 300),
+                          mainButton: TextButton(
+                            onPressed: () {
+                              if (removeIndex != -1) {
+                                context.read<Shop>().addToCart(product);
+                                removeIndex = -1;
+                              }
+                              closeSnack();
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .inversePrimary,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: const Text(
+                                'Undo',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+
+                        removeItemFromCart(context, item);
+                      });
                 }),
           ),
 
@@ -66,7 +110,7 @@ class CartPage extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 10),
             child: MyButton(
               onTap: () => payButton(context),
-              child: Text(
+              child: const Text(
                 'Checkout',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
