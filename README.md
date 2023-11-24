@@ -1,6 +1,8 @@
-# flutter_ecommerce_app
+# Beetz Store
 
-A new Flutter project.
+"Beetz" is a fictional brand that I've created during highschool with my bestfriend, and recently I've decided to incorporate our idea into an E-commerce app!
+
+This app is still on development, and I plan on adding a lot more functionalities to it, as well as a version with an integrated API.
 
 ## Getting Started
 
