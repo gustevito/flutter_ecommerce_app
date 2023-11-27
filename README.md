@@ -4,6 +4,10 @@
 
 This app is still on development, and I plan on adding a lot more functionalities to it, as well as a version with an integrated API.
 
+## Deploy
+
+Web deploy: https://gustevito.github.io/flutter_ecommerce_app/app/
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
