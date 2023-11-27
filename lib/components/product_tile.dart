@@ -28,7 +28,7 @@ class ProductTile extends StatelessWidget {
       ),
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(25),
-      width: 260,
+      width: 320,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

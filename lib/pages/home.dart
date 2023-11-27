@@ -33,8 +33,9 @@ class MyHome extends StatelessWidget {
         // theme switch
         actions: <Widget>[
           IconButton(
-            icon:
-                Get.isDarkMode ? const Icon(Icons.light_mode) : const Icon(Icons.dark_mode),
+            icon: Get.isDarkMode
+                ? const Icon(Icons.light_mode)
+                : const Icon(Icons.dark_mode),
             onPressed: () {
               Get.changeThemeMode(
                   Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
@@ -96,7 +97,7 @@ class MyHome extends StatelessWidget {
           ),
           // products
           SizedBox(
-            height: 480,
+            height: 560,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.all(15),

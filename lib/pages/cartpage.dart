@@ -107,7 +107,7 @@ class CartPage extends StatelessWidget {
 
           // pay button
           Padding(
-            padding: const EdgeInsets.only(bottom: 10),
+            padding: const EdgeInsets.only(bottom: 30),
             child: MyButton(
               onTap: () => payButton(context),
               child: const Text(
