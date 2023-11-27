@@ -1,4 +1,4 @@
-# Beetz Store
+# Beetz Store 🐝
 
 "Beetz" is a fictional brand that I've created during highschool with my bestfriend, and recently I've decided to incorporate our idea into an E-commerce app!
 
