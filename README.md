@@ -8,7 +8,12 @@ This app is still on development, and I plan on adding a lot more functionalitie
 
 Web deploy: https://gustevito.github.io/flutter_ecommerce_app/app/
 
-## Getting Started
+
+## Acknowledgements
+
+Special thanks to [Mitch Koko](https://github.com/mitchkoko) for sharing valuable insights in his [video](https://www.youtube.com/watch?v=rYdP2LnBGsA) that served as the inspiration for the development of Beetz.
+
+## Set-up Flutter
 
 This project is a starting point for a Flutter application.
 
