@@ -106,7 +106,7 @@ class ProductTile extends StatelessWidget {
                       product.name,
                       snackPosition: SnackPosition.BOTTOM,
                       margin: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-                      animationDuration: const Duration(milliseconds: 600),
+                      animationDuration: const Duration(milliseconds: 200),
                       mainButton: TextButton(
                         onPressed: () {
                           context.read<Shop>().removeFromCart(product);
