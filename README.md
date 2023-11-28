@@ -1,7 +1,6 @@
 # Beetz Store 🐝 — Minimal E-commerce App (Flutter)
 
 "Beetz" is a fictional brand that I created during highschool with my bestfriend, and recently I've decided to incorporate our idea into a minimalist E-commerce app fully developed in Flutter!
-
 This app is still on development, and I plan on adding a lot more functionalities to it, as well as a version with an integrated API.
 
 ## Deploy
