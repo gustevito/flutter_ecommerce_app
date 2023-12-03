@@ -9,7 +9,7 @@ Web deploy: https://gustevito.github.io/flutter_ecommerce_app/app/
 
 ## Clone repository
 ```
-git clone https://github.com/gustevito/desafio_tecnico_1.git
+git clone https://github.com/gustevito/flutter_ecommerce_app
 ```
 
 ## Set-up Flutter
