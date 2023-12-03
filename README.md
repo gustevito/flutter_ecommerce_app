@@ -9,7 +9,7 @@ Web deploy: https://gustevito.github.io/flutter_ecommerce_app/app/
 
 ## Acknowledgements
 
-Special thanks to [Mitch Koko](https://github.com/mitchkoko) for sharing valuable insights in his [video](https://www.youtube.com/watch?v=rYdP2LnBGsA) that served as the inspiration for the development of Beetz.
+Special thanks to [Mitch Koko](https://github.com/mitchkoko) for sharing valuable insights in his [video](https://www.youtube.com/watch?v=rYdP2LnBGsA) that served as inspiration for the development of Beetz!
 
 ## Assets
 
