@@ -14,7 +14,7 @@ git clone https://github.com/gustevito/flutter_ecommerce_app
 
 ## Set-up Flutter
 
-If you don't already have Flutter installed on your machine, I recommend following the steps given on these videos:
+If you want to analyze the code and don't have Flutter installed on your machine, I recommend following the steps given in the following videos:
 - [Flutter set-up for Windows;](https://www.youtube.com/watch?v=VFDbZk2xhO4)
 - [Flutter set-up for MacOS;](https://www.youtube.com/watch?v=f09c-nw15K8)
 - [Flutter set-up for Linux;](https://www.youtube.com/watch?v=RFSF4t5FQhg)
